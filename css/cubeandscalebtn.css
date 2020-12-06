@@ -1,0 +1,82 @@
+.choose{
+	width: 900px;
+	height: 300px;
+	text-align: center;
+	margin: 0 auto;
+}
+.btn{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+	color: #999;
+	border: 1px solid #ccc;
+	text-align: center;
+	border-radius: 10px;
+	line-height: 40px;
+}
+#front:checked~.cube{
+	transform: rotate3d(0,0,0,0deg);
+}
+#back:checked~.cube{
+	/* 绕y轴转动,则选择y轴上任一点即可 */
+	transform: rotate3d(0,1,0,180deg);
+}
+#left:checked~.cube{
+	transform: rotate3d(0,1,0,90deg);
+}
+#right:checked~.cube{
+	transform: rotate3d(0,1,0,-90deg);
+}
+#front:checked~.choose [for="front"]{
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0 0 15px #999999;
+}
+#back:checked~.choose [for="back"]{
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0 0 15px #999999;
+}
+#left:checked~.choose [for="left"]{
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0 0 15px #999999;
+}
+#right:checked~.choose [for="right"]{
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0 0 15px #999999;
+}
+#top:checked~.cube{
+	transform: rotate3d(1,0,0,-90deg);
+}
+#bottom:checked~.cube{
+	transform: rotate3d(1,0,0,90deg);
+}
+#top:checked~.choose [for="top"]{
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0 0 15px #999999;
+}
+#bottom:checked~.choose [for="bottom"]{
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0 0 15px #999999;
+}
+#big:checked~.cube{
+	transform: scale(2);
+}
+#small:checked~.cube{
+	transform: scale(0.5);
+}
+#big:checked~.choose [for="big"]{
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0 0 15px #999999;
+}
+#small:checked~.choose [for="small"]{
+	background: #ccc;
+	color: #fff;
+	box-shadow: 0 0 15px #999999;
+}
