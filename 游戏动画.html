@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#d1{
+				width: 300px;
+				height: 200px;
+				/* border: 1px solid #ccc; */
+				background-image: url(img/鸣人.png);
+				background-size: auto;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			@keyframes jineng{
+				from{
+					/* 背景图片的位置 */
+					background-position: 0 0;
+				}
+				to{
+					/* 将图片向上移动,从上到下;为正则为反向 */
+					background-position: 0 -3072px;
+				}
+			}
+			#mingren:checked~#d1{
+				/* 一步即为一帧 */
+				animation: jineng 2s steps(16) infinite;
+				/* 默认为0,在后面的在上面,设置为1的在上面 */
+				z-index: 1;
+			}
+			#d2{
+				width: 400px;
+				height: 200px;
+				/* border: 1px solid #ccc; */
+				background-image: url(img/佐助.png);
+				background-size: 1150px 2600px;
+				position: absolute;
+				animation: zuozhu 2s steps(13) infinite;
+				left: 0;
+				top: 0;
+			}
+			@keyframes zuozhu{
+				from{
+					/* 背景图片的位置 */
+					background-position: 0 0;
+				}
+				to{
+					/* 将图片向上移动,从上到下;为正则为反向 */
+					background-position: 0 -2496px;
+				}
+			}
+			.main{
+				width: 600px;
+				height: 400px;
+				margin: 0 auto;
+				border: 1px solid #ccc;
+				position: relative;
+			}
+			label{
+				display: inline-block;
+				width: 100px;
+				height: 40px;
+				font-size: 20px;
+				color: #999;
+				border: 1px solid #ccc;
+				text-align: center;
+				border-radius: 10px;
+				line-height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<input type="checkbox" name="" id="mingren" value="" hidden="hidden"/>
+			<div id="d1">
+			</div>
+			<div id="d2">
+			</div>
+		</div>
+		<label for="mingren">鸣人</label>
+	</body>
+</html>

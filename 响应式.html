@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, 
+user-scalable=no">
+		<style type="text/css">
+			.d1{
+				width: 25%;
+				height: 200px;
+				background: skyblue;
+			}
+			/* 媒体查询 */
+			/* 设定小于600px时的样式 */
+			@media only screen and (max-width:600px) {
+				.d1{
+					width: 100%;
+					background: red;
+				}
+			} 
+			@media only screen and (min-width:1200px) {
+				.d1{
+					width: 33%;
+					background: yellow;
+				}
+			}
+			@media only screen and (min-width:600px) and (max-width:1200px) {
+				.d1{
+					width: 50%;
+					background: purple;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="d1">
+			
+		</div>
+	</body>
+</html>
